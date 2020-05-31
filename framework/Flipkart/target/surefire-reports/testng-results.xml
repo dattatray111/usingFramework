@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="46335" started-at="2020-05-31T17:17:28Z" finished-at="2020-05-31T17:18:14Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunCukesTest@5afa04c]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Surefire test" duration-ms="46335" started-at="2020-05-31T17:17:28Z" finished-at="2020-05-31T17:18:14Z">
+      <class name="RunCukesTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunCukesTest@5afa04c]" name="setUpClass" is-config="true" duration-ms="473" started-at="2020-05-31T22:47:28Z" finished-at="2020-05-31T22:47:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunCukesTest@5afa04c]" name="feature" duration-ms="44735" started-at="2020-05-31T22:47:28Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-05-31T22:48:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Flipkart Smoke Suite]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunCukesTest@5afa04c]" name="tearDownClass" is-config="true" duration-ms="931" started-at="2020-05-31T22:48:13Z" finished-at="2020-05-31T22:48:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- RunCukesTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
