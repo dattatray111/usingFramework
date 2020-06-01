@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="55060" started-at="2020-06-01T10:47:19Z" finished-at="2020-06-01T10:48:14Z">
+  <suite name="Surefire suite" duration-ms="26321" started-at="2020-06-01T10:53:20Z" finished-at="2020-06-01T10:53:46Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunCukesTest@174d20a]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunCukesTest@1afa04c]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="55060" started-at="2020-06-01T10:47:19Z" finished-at="2020-06-01T10:48:14Z">
+    <test name="Surefire test" duration-ms="26321" started-at="2020-06-01T10:53:20Z" finished-at="2020-06-01T10:53:46Z">
       <class name="RunCukesTest">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunCukesTest@174d20a]" name="setUpClass" is-config="true" duration-ms="590" started-at="2020-06-01T16:17:19Z" finished-at="2020-06-01T16:17:19Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:RunCukesTest@1afa04c]" name="setUpClass" is-config="true" duration-ms="530" started-at="2020-06-01T16:23:20Z" finished-at="2020-06-01T16:23:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunCukesTest@174d20a]" name="feature" duration-ms="52929" started-at="2020-06-01T16:17:19Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-06-01T16:18:12Z">
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:RunCukesTest@1afa04c]" name="feature" duration-ms="24682" started-at="2020-06-01T16:23:21Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-06-01T16:23:45Z">
           <params>
             <param index="0">
               <value>
@@ -25,7 +25,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunCukesTest@174d20a]" name="tearDownClass" is-config="true" duration-ms="1341" started-at="2020-06-01T16:18:12Z" finished-at="2020-06-01T16:18:14Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:RunCukesTest@1afa04c]" name="tearDownClass" is-config="true" duration-ms="824" started-at="2020-06-01T16:23:45Z" finished-at="2020-06-01T16:23:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
