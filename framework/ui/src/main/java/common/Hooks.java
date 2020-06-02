@@ -24,14 +24,19 @@ public class Hooks {
 	@Before
 	public void setUp(Scenario scenario) {
 		scenarioName = scenario.getName();
-		
-		properties = new PropertyReader() ;
+
+		properties = new PropertyReader();
 		String browserName = PropertyReader.getProperty("browser");
-		
-		switch (browserName) 
-		{
+		String os = System.getProperty("os.name").toLowerCase();
+		System.out.println("Opersting system :"+os);
+		switch (browserName) {
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+			if (os.contains("windows")) {
+				System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+			} else {
+
+				System.setProperty("webdriver.chrome.driver", "src/test/resources/ForLinux/chromedriver.exe");
+			}
 			driver = new ChromeDriver();
 			break;
 		case "firefox":
@@ -45,16 +50,14 @@ public class Hooks {
 		default:
 
 		}
-		
-		
-		System.out.println("==========================EXECUTION STARTED FOR " + scenarioName + "=======================");
-		
+
+		System.out
+				.println("==========================EXECUTION STARTED FOR " + scenarioName + "=======================");
+
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 	}
 
-	
-	
 	@After
 	public void Report(Scenario scenario) {
 		if (scenario.isFailed()) {
@@ -65,18 +68,19 @@ public class Hooks {
 				System.err.println(somePlatformsDontSupportScreenshots.getMessage());
 			}
 		}
-		File f = new File("extentconfig.xml"); 
+		File f = new File("extentconfig.xml");
 		String absolute = f.getAbsolutePath();
-		System.out.println(absolute+"   ...");
+		System.out.println(absolute + "   ...");
 		Reporter.loadXMLConfig(new File("extent-config.xml"));
 		Reporter.setSystemInfo("user", System.getProperty("user.name"));
 		Reporter.setSystemInfo("os", "Mac OSX");
 		Reporter.setTestRunnerOutput("Sample test runner output message");
-		
+
 	}
+
 	@After
 	public void cleanUp(Scenario scenario) {
-		
+
 		if (scenario.isFailed()) {
 			try {
 				byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
@@ -87,6 +91,5 @@ public class Hooks {
 		}
 		driver.quit();
 	}
-	
-	
+
 }
