@@ -35,7 +35,7 @@ public class Hooks {
 				System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 			} else {
 
-				System.setProperty("webdriver.chrome.driver", "src/test/resources/ForLinux/chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "src/test/resources/ForLinux/chromedriver");
 			}
 			driver = new ChromeDriver();
 			break;
